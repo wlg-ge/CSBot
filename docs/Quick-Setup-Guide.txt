@@ -1,0 +1,67 @@
+CSBot Quick-setup guide, by Ilan Tayary (a.k.a. Yonatanz) and Nir Tarcic (a.k.a Eternal_Bliss)
+Last updated: April 4th, 2004
+For version: 0.45b
+
+Table of contents:
+------------------
+Assumptions
+Step-by-step basic setup, Game server
+Step-by-step basic setup, IRC server
+
+
+
+Part 1 - Assumptions
+--------------------
+This document assumes that:
+
+- You know the RCON password for your game server
+- You know the IP address and port of your game server
+- You know the IP address of the computer CSBot is running on
+- You have downloaded a CSBot release and extracted CSBot.EXE to some folder on your computer.
+- You know which IRC server you wish to connect to, and you know its hostname (QuakeNet: irc.quakenet.org, GamesNet: irc.gamesnet.net, etc.)
+- You know which channel you want to use in that IRC server
+- One of the following is true:
+	- (Case 1 - Internet) The game server is running somewhere on the internet, you are running CSBot on your computer with an internet connection*
+	- (Case 2 - LAN) The game server is accessible on the local area network, and you are running CSBot on your computer on this network
+	- (Case 3 - Local) The game server is running on the same computer that you run CSBot on
+
+*NOTE: If Case 1 above applies to you, and you are behind a NAT router, or a firewall, then special configuration is required, as follows:
+           You have to set up the firewall to allow incoming connections on a UDP port that you define(make sure to change the local port!)
+           You have to set up your NAT router to forward the port you have chosen to the computer where you run CSBot.
+
+If you are missing some information, or your server and network configuration is not covered in the cases described above, then you might want to refer to the getting-started guide or to a more in-depth documentation instead.
+
+
+
+Part 2 - Step-by-step basic setup, Game server
+----------------------------------------------
+
+- Run CSBot.EXE
+- Click on the "Connect to game server" button in the toolbar (leftmost button). This will bring up the game server connection settings.
+- Fill in the details, as follows:
+	- Under "Server IP/name", type in your game server's IP address
+	- Under "Server port", type in your game server's port number
+	- According to your case (from Part 1 of this document)
+		- (Case 1 - Internet), Click "Guess Harder". This will automatically set "Local IP" to your public IP address.
+		- (Case 2 - LAN), click "Guess". This will automatically set "Local IP" to your LAN's IP address
+		- (Case 3 - Local), under "Local IP", type in the IP address: 127.0.0.1
+	- Under "Rcon password", type in the RCON password for your server
+- Click "Connect". At this point you should see the game server's log appearing in the "Raw Log" window in CSBot.
+
+
+
+Part 3 - Step-by-step basic setup, IRC server
+---------------------------------------------
+
+- Click on the "Connect to IRC server" button button on the toolbar (second-leftmost button). This will bring up the IRC connection settings
+- Fill in the details, as follows:
+	- Under "Server IP/name", type in the IRC server's hostname 
+	- Under "Channel", type in the channel you wish to publish in, including the # sign (for example: #MyCSBotChannel)
+	- Under "Nickname", type in your bot's desired nickname
+- Click "Connect". At this point, CSBot should start publishing your game on the channel.
+
+
+
+That is it.
+For more in-depth coverage of setting up CSBot, or for more detailed description of available options, refer to the other CSBot documentation.
+For any kind of help concerning CSBot, visit our IRC channel. #csbot on irc.gamesurge.net
