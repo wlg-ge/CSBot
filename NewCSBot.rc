@@ -1,0 +1,1240 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\NewCSBot.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\NewCSBot.ico"
+IDR_RAWLOG              ICON    DISCARDABLE     "res\\icon1.ico"
+IDR_PLAYERLIST          ICON    DISCARDABLE     "res\\idr_rawl.ico"
+IDR_RCON                ICON    DISCARDABLE     "res\\ico00001.ico"
+IDR_IRC                 ICON    DISCARDABLE     "res\\idr_rcon.ico"
+IDR_SCHED               ICON    DISCARDABLE     "res\\ico00002.ico"
+IDR_TRAY16              ICON    DISCARDABLE     "res\\ico00003.ico"
+IDR_TRAY256             ICON    DISCARDABLE     "res\\idr_tray.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_IMAGELIST           BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_TOOLBAR2            BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_TOOLBARDISABLED     BITMAP  DISCARDABLE     "res\\Toolbar-bw.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_SERVER_CONNECT_GAME
+    BUTTON      ID_SERVER_CONNECT_IRC
+    BUTTON      ID_MUTE
+    SEPARATOR
+    BUTTON      ID_VIEW_RAWLOG
+    BUTTON      ID_VIEW_PLAYERS
+    BUTTON      ID_VIEW_RCON
+    BUTTON      ID_VIEW_IRC
+    BUTTON      ID_VIEW_SCHED
+    SEPARATOR
+    BUTTON      ID_VIEW_OPTIONS
+    BUTTON      ID_SERVER_WONIDS
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Server"
+    BEGIN
+        MENUITEM "Connect to &Game Server...",  ID_SERVER_CONNECT_GAME
+        MENUITEM "Connect to &IRC Server...",   ID_SERVER_CONNECT_IRC
+        MENUITEM "&Mute IRC Output",            ID_MUTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Options...",                 ID_VIEW_OPTIONS
+        MENUITEM "&Browse WonID Database...",   ID_SERVER_WONIDS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Raw &CS log",                 ID_VIEW_RAWLOG
+        MENUITEM "&Player list",                ID_VIEW_PLAYERS
+        MENUITEM "&Rcon console",               ID_VIEW_RCON
+        MENUITEM "&IRC console",                ID_VIEW_IRC
+        MENUITEM "Rcon &Sched",                 ID_VIEW_SCHED
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "&Tile vertically",            ID_WINDOW_TILE_VERT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Visit CSBot &website",        ID_HELP_SITE
+        MENUITEM "Visit CSBot &forums",         ID_HELP_FORUMS
+        MENUITEM "Check for &update",           ID_HELP_UPDATE
+        MENUITEM "&Report a bug",               ID_HELP_REPORT
+        MENUITEM "UnitedAdmins.com",            ID_HELP_UNITEDADMINS
+        MENUITEM SEPARATOR
+        MENUITEM "&About CSBot...",             ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 241, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CSBot"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,14,20,20
+    LTEXT           "CSBot Version 0.46",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Beta test version",IDC_STATIC,40,20,54,8
+    LTEXT           "Copyright (C) 2001, 2002, 2003, 2004 Ilan Tayary\nOriginal idea by Eternal_Bliss",
+                    IDC_STATIC,40,40,194,26
+    LTEXT           "Website: http://www.csbot.org",IDC_LINK,40,30,99,8,
+                    SS_NOTIFY
+    DEFPUSHBUTTON   "&OK",IDOK,184,7,50,14,WS_GROUP
+    LTEXT           "CSBot comes with ABSOLUTELY NO WARRANTY; for details see the COPYING.TXT file that came with CSBot.\nThis is free software, and you are welcome to redistribute it under certain conditions; see the COPYING.TXT file for details.",
+                    IDC_STATIC,40,80,194,42
+    LTEXT           "A United Admins project: http://www.unitedadmins.com",
+                    IDC_UA,40,68,194,10,SS_NOTIFY
+END
+
+IDD_CONNECT_GAME DIALOG DISCARDABLE  0, 0, 330, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Game Server connection settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Game server profiles:",IDC_STATIC,7,7,67,8
+    LISTBOX         IDC_PROFILES,7,17,96,178,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Tabs",IDC_TABS,108,7,213,170,NOT WS_VISIBLE | WS_BORDER
+    PUSHBUTTON      "&Add",IDC_ADDPROFILE,108,181,40,14
+    PUSHBUTTON      "&Rename",IDC_RENAMEPROFILE,152,181,40,14
+    PUSHBUTTON      "&Delete",IDC_REMOVEPROFILE,196,181,40,14
+    DEFPUSHBUTTON   "&Connect",IDOK,240,181,40,14
+    PUSHBUTTON      "&Close",IDCANCEL,283,181,40,14
+END
+
+IDD_CUSTOMBAN DIALOG DISCARDABLE  0, 0, 186, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select length of ban"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Ban this punk for",IDC_STATIC,7,7,54,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_AMOUNT,68,7,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    COMBOBOX        IDC_TYPE,113,7,48,66,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&OK",IDOK,34,29,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,101,29,50,14
+END
+
+IDD_CONNECTIRC DIALOG DISCARDABLE  0, 0, 330, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IRC Server connection settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "IRC server profiles:",IDC_STATIC,7,7,60,8
+    LISTBOX         IDC_PROFILES,7,17,96,178,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Tabs",IDC_TABS,108,7,213,170,NOT WS_VISIBLE | WS_BORDER
+    PUSHBUTTON      "&Add",IDC_ADDIRCPROFILE,108,181,40,14
+    PUSHBUTTON      "&Rename",IDC_RENAMEIRCPROFILE,152,181,40,14
+    PUSHBUTTON      "&Delete",IDC_REMOVEIRCPROFILE,196,181,40,14
+    DEFPUSHBUTTON   "&Connect",IDOK,240,181,40,14
+    PUSHBUTTON      "&Close",IDCANCEL,283,181,40,14
+END
+
+IDD_PROFILENAME DIALOG DISCARDABLE  0, 0, 252, 49
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Profile name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_NAME,7,7,238,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,67,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,135,28,50,14
+END
+
+IDD_WONIDDLG DIALOG DISCARDABLE  0, 0, 327, 209
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Browse WonID Database"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "WonID:",IDC_STATIC,7,7,313,31
+    COMBOBOX        IDC_WONID,15,18,120,225,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_NEWEONID,169,18,85,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Add WonID",IDC_ADDWONID,257,18,49,14
+    GROUPBOX        "Names:",IDC_STATIC,7,41,208,160
+    LTEXT           "",IDC_COUNT,15,54,149,8
+    LISTBOX         IDC_LIST,15,65,192,110,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NEWNAME,15,179,86,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "A&dd Name",IDC_ADDNAME,104,179,46,14
+    PUSHBUTTON      "Dele&te name",IDC_DELETENAME,154,179,52,14
+    GROUPBOX        "Search Database",IDC_STATIC,222,41,98,61
+    EDITTEXT        IDC_FINDNAME,228,54,85,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Search",IDC_FIND,228,70,85,14
+    CONTROL         "Match case",IDC_CASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,228,86,85,14
+    PUSHBUTTON      "&Refresh lists",IDC_REFRESH,222,134,98,14
+    PUSHBUTTON      "Export database...",IDC_EXPORT,222,152,98,14
+    PUSHBUTTON      "Import database...",IDC_IMPORT,222,170,98,14
+    DEFPUSHBUTTON   "&Close",IDCANCEL,222,188,98,14
+END
+
+IDD_OPTIONS_GENERAL DIALOG DISCARDABLE  0, 0, 350, 250
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Save game log &files in folder:",IDC_LOGTOFILE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,111,14
+    EDITTEXT        IDC_FILENAME,121,7,169,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Browse ...",IDC_LOGBROWSE,298,7,45,14
+    CONTROL         "Build &WonID database in folder:",IDC_WONIDDB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,42,113,14
+    EDITTEXT        IDC_WONIDFOLDER,121,42,169,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Browse ...",IDC_WONIDBROWSE,298,42,45,14
+    CONTROL         "&Remember size and position of child windows",
+                    IDC_REMEMBER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,58,
+                    167,14
+    LTEXT           "RconSched running level:",IDC_STATIC,7,76,83,14,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_RUNLEVEL,121,76,169,150,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Check and notify about CSBot updates",IDC_NOTIFYUPDATES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,93,166,14
+    CONTROL         "Warn if ""log"" is set to ""off""",IDC_WARNLOGOFF,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,110,191,14
+    LTEXT           "Game server connection timeout:",IDC_STATIC,7,127,105,
+                    14,SS_CENTERIMAGE
+    EDITTEXT        IDC_GAMECONNECTTIMEOUT,121,127,34,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Seconds",IDC_STATIC,157,127,29,14,SS_CENTERIMAGE
+    CONTROL         "&Clean IDs from Log",IDC_FILTER_LOG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,122,25,76,10
+END
+
+IDD_OPTIONS_IRC_IN DIALOG DISCARDABLE  0, 0, 350, 250
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "IRC Interface"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Trusted people",IDC_STATIC,7,7,336,94
+    CONTROL         "Automatically log&out if not active for",IDC_AUTOLOGOFF,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,16,125,14
+    EDITTEXT        IDC_LOGOFF_MINUTES,141,16,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "minutes",IDC_STATIC,185,16,26,14,SS_CENTERIMAGE
+    CONTROL         "List1",IDC_TRUSTLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,14,31,266,65
+    PUSHBUTTON      "&Add",IDC_TRUSTADD,285,31,50,14
+    PUSHBUTTON      "&Edit",IDC_TRUSTEDIT,285,56,50,14,WS_DISABLED
+    PUSHBUTTON      "&Delete",IDC_TRUSTDELETE,285,81,50,14,WS_DISABLED
+    GROUPBOX        "Allow these commands to everyone:",IDC_STATIC,7,104,173,
+                    139
+    CONTROL         "List1",IDC_ALLOWCOMMANDS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | 
+                    WS_BORDER | WS_TABSTOP,13,116,161,100
+    LTEXT           "NOTE: The RCON command will require the user to specify the rcon password",
+                    IDC_STATIC,13,218,158,21
+    GROUPBOX        "Enable bot interface from:",IDC_STATIC,187,104,156,73
+    CONTROL         "DCC Chat",IDC_IRCCHAT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,194,117,47,10
+    CONTROL         "Private IRC messages",IDC_IRCPM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,194,129,85,10
+    CONTROL         "Bot's channel. Command prefix:",IDC_IRCCM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,194,141,112,10
+    EDITTEXT        IDC_IRCCM_PREFIX,311,139,21,14,ES_AUTOHSCROLL
+    LTEXT           "NOTE: The RCON command will not work from the bot's channel.",
+                    IDC_STATIC,194,155,137,18
+END
+
+IDD_OPTIONS_IRC_OUT DIALOG DISCARDABLE  0, 0, 350, 250
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "IRC Output"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "AntiFlood protection limits:",IDC_STATIC,7,7,166,55
+    EDITTEXT        IDC_LINES,15,20,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "messages in",IDC_STATIC,43,20,41,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_SECONDS,15,39,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "seconds",IDC_STATIC,43,39,31,14,SS_CENTERIMAGE
+    LTEXT           "Force delay of IRC game publishing by",IDC_STATIC,7,66,
+                    122,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_IRCDELAY,132,66,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "seconds (0 for no delay)",IDC_STATIC,162,66,76,14,
+                    SS_CENTERIMAGE
+END
+
+IDD_OPTIONS_IRC_MSGS DIALOG DISCARDABLE  0, 0, 350, 250
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Game publishing"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,4,6,95,237
+    LTEXT           "Static",IDC_TABS,106,6,235,237,NOT WS_VISIBLE
+END
+
+IDD_INSERT_ONCE DIALOG DISCARDABLE  0, 0, 275, 183
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "RCON event 'once'"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "A 'Once' event will occur once, at a specified time (or after).\nAfter it has occured, it will not be activated again, unless edited.",
+                    IDC_STATIC,7,7,261,18
+    LTEXT           "&Comment:",IDC_STATIC,7,25,32,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_COMMENT,43,25,225,14,ES_AUTOHSCROLL
+    LTEXT           "&Perform these commands:",IDC_STATIC,7,41,82,8
+    LISTBOX         IDC_LIST,7,52,206,76,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Add",IDC_ADD,218,52,50,14
+    PUSHBUTTON      "&Edit",IDC_EDIT,218,81,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,218,113,50,14
+    LTEXT           "&Exactly at:",IDC_STATIC,7,130,34,14,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,43,130,58,15
+    CONTROL         "DateTimePicker1",IDC_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,104,130,
+                    58,15
+    CONTROL         "C&ritical",IDC_CRITICAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,149,37,10
+    DEFPUSHBUTTON   "OK",IDOK,73,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,162,50,14
+END
+
+IDD_INSERT_MINUTE DIALOG DISCARDABLE  0, 0, 275, 183
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "RCON event every minute"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "An 'Every minute' event will occur every minute, or every specified amount of minutes",
+                    IDC_STATIC,7,7,261,18
+    LTEXT           "&Comment:",IDC_STATIC,7,25,32,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_COMMENT,43,25,225,14,ES_AUTOHSCROLL
+    LTEXT           "&Perform these commands:",IDC_STATIC,7,41,82,8
+    LISTBOX         IDC_LIST,7,52,206,76,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Add",IDC_ADD,218,52,50,14
+    PUSHBUTTON      "&Edit",IDC_EDIT,218,81,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,218,113,50,14
+    LTEXT           "&Every",IDC_STATIC,7,130,22,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_AMOUNT,30,130,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_AMOUNTSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,106,130,11,14
+    LTEXT           "Minutes",IDC_STATIC,69,130,26,14,SS_CENTERIMAGE
+    CONTROL         "C&ritical",IDC_CRITICAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,149,37,10
+    DEFPUSHBUTTON   "OK",IDOK,76,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,150,162,50,14
+END
+
+IDD_INSERT_HOUR DIALOG DISCARDABLE  0, 0, 275, 185
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "RCON event every hour"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "An 'Every hour' event will occur every hour, or every specified amount of hours.\nYou can also choose to make it occur on the hour.",
+                    IDC_STATIC,7,7,261,18
+    LTEXT           "&Comment:",IDC_STATIC,7,27,32,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_COMMENT,43,27,225,14,ES_AUTOHSCROLL
+    LTEXT           "&Perform these commands:",IDC_STATIC,7,43,82,8
+    LISTBOX         IDC_LIST,7,54,206,76,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Add",IDC_ADD,218,54,50,14
+    PUSHBUTTON      "&Edit",IDC_EDIT,218,83,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,218,115,50,14
+    LTEXT           "&Every",IDC_STATIC,7,133,22,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_AMOUNT,30,133,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_AMOUNTSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,153,133,11,14
+    LTEXT           "Hour(s)",IDC_STATIC,70,133,24,14,SS_CENTERIMAGE
+    CONTROL         "&On the hour",IDC_ONTHEHOUR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,98,134,53,14
+    CONTROL         "C&ritical",IDC_CRITICAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,151,37,10
+    DEFPUSHBUTTON   "OK",IDOK,75,164,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,151,164,50,14
+END
+
+IDD_INSERT_DAY DIALOG DISCARDABLE  0, 0, 275, 178
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "RCON event every day"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "An 'Every day' event will occur every day at a specified time",
+                    IDC_STATIC,7,7,261,10
+    LTEXT           "&Comment:",IDC_STATIC,7,17,32,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_COMMENT,43,17,225,14,ES_AUTOHSCROLL
+    LTEXT           "&Perform these commands:",IDC_STATIC,7,33,82,8
+    LISTBOX         IDC_LIST,7,44,206,76,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Add",IDC_ADD,218,44,50,14
+    PUSHBUTTON      "&Edit",IDC_EDIT,218,73,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,218,105,50,14
+    LTEXT           "&At:",IDC_STATIC,7,124,10,15,SS_CENTERIMAGE
+    CONTROL         "DateTimePicker1",IDC_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,19,124,58,
+                    15
+    LTEXT           "&Every",IDC_STATIC,82,124,22,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_AMOUNT,105,124,36,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_AMOUNTSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,180,124,11,14
+    LTEXT           "Days",IDC_STATIC,144,124,26,14,SS_CENTERIMAGE
+    CONTROL         "C&ritical",IDC_CRITICAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,143,37,10
+    DEFPUSHBUTTON   "OK",IDOK,75,157,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,150,157,50,14
+END
+
+IDD_IRC_COLOR DIALOG DISCARDABLE  0, 0, 204, 175
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IRC Color"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Foreground:",IDC_STATIC,7,7,39,8
+    LISTBOX         IDC_FOREGROUND,7,18,85,110,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Background:",IDC_STATIC,112,7,42,8
+    LISTBOX         IDC_BACKGROUND,112,18,85,110,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Sample Text",IDC_SAMPLE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,69,135,66,13
+    DEFPUSHBUTTON   "OK",IDOK,43,154,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,110,154,50,14
+END
+
+IDD_EDIT_TRUSTED_PERSON DIALOG DISCARDABLE  0, 0, 199, 199
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Trusted person's detalis"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Username:",IDC_STATIC,7,7,35,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_NICK,45,7,147,14,ES_AUTOHSCROLL
+    LTEXT           "&Password:",IDC_STATIC,7,23,34,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_PASS,45,23,147,14,ES_PASSWORD | ES_AUTOHSCROLL
+    GROUPBOX        "Allow these commands:",IDC_STATIC,7,52,185,122
+    CONTROL         "Account enabled",IDC_PER_LOGIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,7,42,70,10
+    DEFPUSHBUTTON   "OK",IDOK,36,178,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,113,178,50,14
+    CONTROL         "List1",IDC_ALLOWEDCOMMANDS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | 
+                    WS_BORDER | WS_TABSTOP,13,65,171,82
+    LTEXT           "NOTE: The RCON command for a trusted person does NOT require a password.",
+                    IDC_STATIC,14,150,171,20
+END
+
+IDD_OPTIONS_SUMMON DIALOGEX 0, 0, 350, 250
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Admin summoning"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Summon word:",IDC_STATIC,7,7,48,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_SUMMONWORD,59,7,77,14,ES_AUTOHSCROLL
+    CONTROL         "Enable summoning from global game chat",IDC_ALLOWSUMMON,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,23,336,14
+    CONTROL         "Enable summoning from team chat",IDC_ALLOWSUMMONTEAM,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,39,336,14
+    GROUPBOX        "When summoned:",IDC_STATIC,7,56,336,112
+    CONTROL         "Flash CSBot in the taskbar",IDC_SUMMON_FLASH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,69,99,10
+    CONTROL         "Play wave file:",IDC_SUMMON_PLAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,81,61,14
+    PUSHBUTTON      "FIle...",IDC_SUMMON_PLAYFILE,79,81,255,14
+    LTEXT           "And Issue IRC commands:",IDC_STATIC,15,99,84,8
+    CONTROL         "List1",IDC_LINELIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | 
+                    WS_TABSTOP,15,109,272,53,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Add",IDC_ADDLINE,293,109,41,14
+    PUSHBUTTON      "&Edit",IDC_EDITLINE,293,128,41,14
+    PUSHBUTTON      "&Delete",IDC_DELETELINE,293,147,41,14
+END
+
+IDD_CONNECT_GAME_GENERAL DIALOG DISCARDABLE  0, 0, 210, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Server IP/&name:",IDC_STATIC1,5,5,53,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVERNAME,61,5,143,14,ES_AUTOHSCROLL
+    LTEXT           "Server por&t:",IDC_STATIC2,5,22,38,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_PORT,61,22,44,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Rcon &password:",IDC_STATIC6,5,40,52,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_RCON,61,40,144,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Logging system:",IDC_STATIC,5,58,52,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_LOGQUERYTYPE,61,58,144,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Local IP:",IDC_STATIC3,5,75,29,15,SS_CENTERIMAGE
+    CONTROL         "IPAddress1",IDC_LOCALIP,"SysIPAddress32",WS_TABSTOP,61,
+                    75,100,15
+    PUSHBUTTON      "&Guess (LAN)",IDC_GUESS,61,93,54,14
+    PUSHBUTTON      "Guess harder (Internet)",IDC_GUESSHARDER,119,93,86,14
+    LTEXT           "Local lo&g port:",IDC_STATIC4,5,110,45,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_LOCALLOGPORT,61,110,44,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "0 for random port",IDC_STATIC5,109,110,96,15,
+                    SS_CENTERIMAGE
+END
+
+IDD_CONNECT_CMDS DIALOG DISCARDABLE  0, 0, 210, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Connect"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Execute these RCON commands when connecting",IDC_LABEL,
+                    5,5,200,8
+    CONTROL         "List2",IDC_CMDS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | 
+                    WS_BORDER | WS_TABSTOP,5,15,200,115
+    PUSHBUTTON      "Add Line",IDC_ADDCMD,5,134,50,14
+    PUSHBUTTON      "Edit Line",IDC_EDITCMD,80,134,50,14,WS_DISABLED
+    PUSHBUTTON      "Delete Line",IDC_DELETECMD,155,134,50,14,WS_DISABLED
+END
+
+IDD_CONNECT_IRC_GENERAL DIALOG DISCARDABLE  0, 0, 210, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Server IP/&name:",IDC_STATIC1,5,5,61,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVERNAME,68,5,89,14,ES_AUTOHSCROLL
+    LTEXT           "por&t:",IDC_STATIC2,159,5,16,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_PORT,175,5,30,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Server pass&word:",IDC_STATIC8,5,23,61,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_PASSWORD,68,22,137,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "&Channel:",IDC_STATIC3,5,39,61,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_CHANNELNAME,68,39,137,14,ES_AUTOHSCROLL
+    LTEXT           "Channel &password:",IDC_STATIC9,5,56,61,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CHANNELPASSWORD,68,56,137,14,ES_AUTOHSCROLL
+    LTEXT           "&Nickname:",IDC_STATIC4,5,73,61,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_NICKNAME,68,73,137,14,ES_AUTOHSCROLL
+    LTEXT           "&Full name:",IDC_STATIC7,5,90,61,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_FULLNAME,68,90,137,14,ES_AUTOHSCROLL
+END
+
+IDD_OPTIONS_IRC_MSGS_MSGS DIALOG DISCARDABLE  0, 0, 246, 245
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,0,3,243,238
+END
+
+IDD_OPTIONS_IRC_MSGS_COLORS DIALOG DISCARDABLE  0, 0, 244, 245
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "IRC Colors (Click to change):",IDC_STATIC,0,3,242,181
+    LTEXT           "Team 0:",IDC_TEAM0,12,20,61,14,SS_CENTERIMAGE
+    CONTROL         "Sample Text",IDC_SAMPLE0,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,80,20,67,14
+    LTEXT           "",IDC_COLOR0,158,20,78,14,SS_CENTERIMAGE
+    LTEXT           "Team 1:",IDC_TEAM1,12,43,61,14,SS_CENTERIMAGE
+    CONTROL         "Sample Text",IDC_SAMPLE1,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,80,43,67,14
+    LTEXT           "",IDC_COLOR1,158,43,78,14,SS_CENTERIMAGE
+    LTEXT           "Team 2:",IDC_TEAM2,12,66,61,14,SS_CENTERIMAGE
+    CONTROL         "Sample Text",IDC_SAMPLE2,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,80,66,67,14
+    LTEXT           "",IDC_COLOR2,158,66,78,14,SS_CENTERIMAGE
+    LTEXT           "Team 3:",IDC_TEAM3,12,89,61,14,SS_CENTERIMAGE
+    CONTROL         "Sample Text",IDC_SAMPLE3,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,80,89,67,14
+    LTEXT           "",IDC_COLOR3,158,89,78,14,SS_CENTERIMAGE
+    LTEXT           "Team 4:",IDC_TEAM4,12,112,61,14,SS_CENTERIMAGE
+    CONTROL         "Sample Text",IDC_SAMPLE4,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,80,112,67,14
+    LTEXT           "",IDC_COLOR4,158,112,78,14,SS_CENTERIMAGE
+    LTEXT           "Team 5:",IDC_TEAM5,12,135,61,14,SS_CENTERIMAGE
+    CONTROL         "Sample Text",IDC_SAMPLE5,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,80,135,67,14
+    LTEXT           "",IDC_COLOR5,158,135,78,14,SS_CENTERIMAGE
+    PUSHBUTTON      "Revert to default colors",IDC_REVERTDEFAULT,67,159,96,
+                    14
+END
+
+IDD_UPDATENOTIFY DIALOG DISCARDABLE  0, 0, 274, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CSBot update notification"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Static",IDC_MSG,7,7,260,93
+    CONTROL         "Do not notify about CSBot updates anymore",
+                    IDC_NOTIFYUPDATES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    7,102,260,10
+    DEFPUSHBUTTON   "OK",IDOK,57,114,50,14
+    PUSHBUTTON      "CSBot website",IDC_WEBSITE,145,114,72,14
+END
+
+IDD_EDIT_IRC_MESSAGE DIALOG DISCARDABLE  0, 0, 355, 199
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit IRC message"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Message:",IDC_STATIC,7,7,32,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_MESSAGE,41,7,307,14,ES_AUTOHSCROLL
+    CONTROL         "&Enable this IRC message",IDC_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,41,23,307,14
+    LTEXT           "Meaning:",IDC_STATIC,7,38,30,8
+    LTEXT           "Static",IDC_MEANING,41,39,307,17
+    LTEXT           "Default:",IDC_STATIC,7,59,26,8
+    LTEXT           "Static",IDC_DEFAULT,41,59,307,17
+    LTEXT           "Scope:",IDC_STATIC,7,81,24,8
+    LTEXT           "Static",IDC_SCOPE,41,81,307,9
+    DEFPUSHBUTTON   "OK",IDOK,59,95,50,14
+    PUSHBUTTON      "&Revert to default",IDC_REVERT,134,95,62,14
+    PUSHBUTTON      "Cancel",IDCANCEL,221,95,50,14
+    LTEXT           "Tags:",IDC_STATIC,7,111,19,8
+    LTEXT           "<name>, <team>, <role>, <frags>, <deaths> - Details of the main player or team involved ",
+                    IDC_STATIC,41,111,307,8
+    LTEXT           "<name2>, <team2>, <role2>, <frags2>, <deaths2> - Details of the other player or team involved",
+                    IDC_STATIC,41,119,307,8
+    LTEXT           "<weapon> - Name of the weapon involved",IDC_STATIC,41,
+                    127,307,8
+    LTEXT           "<say> - The text that was said (where applicable)",
+                    IDC_STATIC,41,135,307,8
+    LTEXT           "<server>, <host>, <ip>, <port> - Game server info (only where applicable)",
+                    IDC_STATIC,41,143,307,8
+    LTEXT           "<other> - Some other parameter specific to this IRC message",
+                    IDC_STATIC,41,151,307,8
+    LTEXT           "",IDC_MORETAGS,41,160,307,32
+END
+
+IDD_OPTIONS_PLAYERLIST DIALOG DISCARDABLE  0, 0, 350, 250
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Player-list commands"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_COMMANDS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,14,17,268,86
+    PUSHBUTTON      "&Add",IDC_ADD,287,17,50,14
+    PUSHBUTTON      "&Edit",IDC_EDIT,287,35,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,287,53,50,14
+    PUSHBUTTON      "Move &up",IDC_MOVEUP,287,71,50,14
+    PUSHBUTTON      "Move dow&n",IDC_MOVEDOWN,287,89,50,14
+    GROUPBOX        "Custom right-click commands",IDC_STATIC,7,7,336,103
+END
+
+IDD_EDIT_PLAYERLIST_COMMAND DIALOG DISCARDABLE  0, 0, 230, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit player-list command"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,7,37,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_NAME,47,7,176,14,ES_AUTOHSCROLL
+    LTEXT           "Command:",IDC_STATIC,7,26,37,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_COMMAND,47,26,176,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,50,45,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,45,50,14
+    LTEXT           "Tags:",IDC_STATIC,7,63,19,8
+    LTEXT           "<name> - The player's name",IDC_STATIC,47,64,176,8
+    LTEXT           "<id> - The player's user ID",IDC_STATIC,47,73,176,8
+    LTEXT           "<wonid> - The player's WON ID",IDC_STATIC,47,82,176,8
+END
+
+IDD_SUMMON_COMMAND DIALOG DISCARDABLE  0, 0, 252, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit IRC command for summoning"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_NAME,7,7,238,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,67,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,135,28,50,14
+    LTEXT           "Available tags:",IDC_STATIC,7,46,47,8
+    LTEXT           "<say> - the full line that the player said",IDC_STATIC,
+                    23,55,222,8
+    LTEXT           "<name> - Name of the player who summoned",IDC_STATIC,23,
+                    64,222,8
+    LTEXT           "<team> - The team of the player who summoned",
+                    IDC_STATIC,23,73,222,8
+    LTEXT           "<role> - The role of the player who summoned",
+                    IDC_STATIC,23,82,222,8
+END
+
+IDD_CONNECT_RECONNECT DIALOG DISCARDABLE  0, 0, 210, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Reconnect"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Automatically reconnect if disconnected,",IDC_RECONNECT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,5,141,14
+    LTEXT           "and keep trying every",IDC_RECONNECTLABEL1,17,19,70,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_RECONNECTSEC,88,19,24,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "seconds, up to",IDC_RECONNECTLABEL2,113,19,49,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_RECONNECTTIMES,163,19,24,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "times",IDC_RECONNECTLABEL3,188,19,17,14,SS_CENTERIMAGE
+    CONTROL         "Assume disconnection is no log lines for",
+                    IDC_INACTIVITY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    37,139,14
+    EDITTEXT        IDC_INACTIVITYTIMEOUT,145,37,24,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Seconds",IDC_INACTIVITYLABEL,172,37,29,14,
+                    SS_CENTERIMAGE
+END
+
+IDD_CONNECT_IRC_IDENT DIALOG DISCARDABLE  0, 0, 210, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ident"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Enable ident server",IDC_IDENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,5,77,14
+    CONTROL         "Close ident server after first query",
+                    IDC_CLOSEIDENTAFTERQUERY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,19,120,14
+    LTEXT           "&User ID:",IDC_STATIC6,5,35,28,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_USERID,34,35,119,14,ES_AUTOHSCROLL
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,4,6,29
+ PRODUCTVERSION 0,4,6,29
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "http://www.unitedadmins.com\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CSBot.   An IRC bot for Half-Life mods\0"
+            VALUE "FileVersion", "0, 4, 6, 29\0"
+            VALUE "InternalName", "CSBot\0"
+            VALUE "LegalCopyright", "Copyright (C) Ilan Tayary 2001 - 2004  http://www.csbot.org\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CSBot.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "CSBot\0"
+            VALUE "ProductVersion", "0, 4, 6, 29\0"
+            VALUE "SpecialBuild", "201\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_CONNECT_GAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 323
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_CUSTOMBAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_CONNECTIRC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 323
+        VERTGUIDE, 118
+        VERTGUIDE, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_PROFILENAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_WONIDDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_OPTIONS_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_OPTIONS_IRC_IN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_OPTIONS_IRC_OUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_OPTIONS_IRC_MSGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_INSERT_ONCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_INSERT_MINUTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_INSERT_HOUR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_INSERT_DAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_IRC_COLOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_EDIT_TRUSTED_PERSON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_OPTIONS_SUMMON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_CONNECT_GAME_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 205
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_CONNECT_CMDS, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 205
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_CONNECT_IRC_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 205
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_OPTIONS_IRC_MSGS_MSGS, DIALOG
+    BEGIN
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 241
+    END
+
+    IDD_OPTIONS_IRC_MSGS_COLORS, DIALOG
+    BEGIN
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 241
+    END
+
+    IDD_UPDATENOTIFY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_EDIT_IRC_MESSAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 348
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_OPTIONS_PLAYERLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_EDIT_PLAYERLIST_COMMAND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_SUMMON_COMMAND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_CONNECT_RECONNECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 205
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_CONNECT_IRC_IDENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 205
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      DISCARDABLE     "res\\default1.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SCHED_DELETE         "Delete RconSched event\nDelete event"
+    ID_SCHED_EDIT           "Edit RconSched event\nEdit event"
+    ID_SCHED_RUNNOW         "Run this RconSched event now\nRun now"
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "CSBot"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "CSBot"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_RAWLOG          "Show the raw log\nRaw log"
+    ID_VIEW_PLAYERS         "Show the player list\nPlayer list"
+    ID_VIEW_RCON            "Show the Rcon console\nRcon console"
+    ID_VIEW_IRC             "Show the IRC console\nIRC Console"
+    ID_VIEW_OPTIONS         "Show the options dialog\nOptions"
+    ID_SERVER_CONNECT_IRC   "Dis/Connect to IRC server\nConnect IRC"
+    ID_SERVER_WONIDS        "Browse the automatically-built WonID database\nWonID Database"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_SITE            "Visit the CSBot webiste\nCSBot website"
+    ID_HELP_REPORT          "Report a bug in CSBot by mail\nReport a bug"
+    ID_HELP_FORUMS          "Visit the CSBot forums\nCSBot forums"
+    ID_MUTE                 "Mutes all IRC event messages\nMute IRC"
+    ID_SERVER_CONNECT_GAME  "Dis/Connect to game server\nConnect to game server"
+    ID_HELP_UPDATE          "Check the internet for a CSBot update\nCheck for update"
+    ID_HELP_UNITEDADMINS    "http://www.unitedadmins.com\nUnitedAdmins.com"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TRAY_RESTORE         "Restore CSBot window\nRestore"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_SCHED           "Show the RconSched window\nRconSched"
+    ID_INSERT_ONCE          "Add a 'once' event into RconSched\nAdd once"
+    ID_INSERT_MINUTE        "Add an 'Every minute' event into RconSched\nAdd every minute"
+    ID_INSERT_HOUR          "Add an 'Every hour' event into RconSched\nAdd every hour"
+    ID_INSERT_DAY           "Add an 'Every day' event into RconSched\nAdd every day"
+    ID_INSERT_WEEK          "Add an 'Every week' event into RconSched\nAdd every week"
+    ID_INSERT_MONTH         "Add an 'Every month' event into RconSched\nAdd every month"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\NewCSBot.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
